@@ -8,6 +8,22 @@
 
 /* STRUCTURES */
 /**
+ * Binary Tree Node Structure
+ *
+ * Defines a C data structure for a binary tree node.
+ * reps a node in a binary tree and consists of an int value and
+ * pointers to its left and right children. Includes a typedef for
+ * convenience, allowing the type to be referred to as 'binary_tree_t'.
+ */
+struct binary_tree_s {
+    int n;
+    struct binary_tree_s *left;
+    struct binary_tree_s *right;
+};
+
+typedef struct binary_tree_s binary_tree_t;
+
+/**
  * struct binary_tree_s - Binary tree node
  *
  * @n: Integer stored in the node
@@ -52,5 +68,10 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
 binary_tree_t *ancestor_helper(binary_tree_t *first, binary_tree_t *second);
+
+size_t _tree_height(const binary_tree_t *tree);
+void print_t(const binary_tree_t *tree, int offset, int depth, char **s);
+size_t _tree_height(const binary_tree_t *tree);
+void print_t(const binary_tree_t *tree, int offset, int depth, char **s);
 
 #endif /* _BINARY_TREES_H_ */
