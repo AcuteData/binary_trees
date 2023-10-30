@@ -8,22 +8,6 @@
 
 /* STRUCTURES */
 /**
- * Binary Tree Node Structure
- *
- * Defines a C data structure for a binary tree node.
- * reps a node in a binary tree and consists of an int value and
- * pointers to its left and right children. Includes a typedef for
- * convenience, allowing the type to be referred to as 'binary_tree_t'.
- */
-struct binary_tree_s {
-    int n;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
-};
-
-typedef struct binary_tree_s binary_tree_t;
-
-/**
  * struct binary_tree_s - Binary tree node
  *
  * @n: Integer stored in the node
